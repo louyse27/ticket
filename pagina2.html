@@ -6,38 +6,44 @@
   <title>Ticket</title>
 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #f9f9f9;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 20px;
+    * {
       box-sizing: border-box;
     }
 
-    img {
-      max-width: 60%;
-      height: auto;
-      margin-bottom: 0;
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 20px;
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
-h1 {
-  max-width: 600px;
-  color: black;
-  font-weight: normal;
-  line-height: 1.4;
-  margin: 0;
-  position: relative;
-  top: -290px;
-  z-index: 10;
-}
+    img {
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 10px;
+    }
 
+    h1 {
+      max-width: 90%;
+      color: #000;
+      font-weight: normal;
+      line-height: 1.4;
+      font-size: 5vw;
+    }
 
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 24px;
+        max-width: 600px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -45,7 +51,6 @@ h1 {
   <img src="IMAGENS/Minimal Green Discount Coupon Event Instagram Post-Photoroom.png" alt="TICKET KISS" />
 
   <h1>Você ganhou um ticket muito importante viu moça, use com moderação.</h1>
-  
 
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
