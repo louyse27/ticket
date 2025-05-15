@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ticket</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    img {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 0;
+    }
+
+h1 {
+  max-width: 600px;
+  color: black;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0;
+  position: relative;
+  top: -290px;
+  z-index: 10;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <img src="IMAGENS/Minimal Green Discount Coupon Event Instagram Post-Photoroom.png" alt="TICKET KISS" />
+
+  <h1>Você ganhou um ticket muito importante viu moça, use com moderação.</h1>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    function soltarConfete() {
+      const duration = 5000;
+      const animationEnd = Date.now() + duration;
+      const defaults = {
+        startVelocity: 30,
+        spread: 360,
+        ticks: 60,
+        zIndex: 0,
+        colors: ['#ff69b4', '#800080']
+      };
+
+      const interval = setInterval(() => {
+        const timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          clearInterval(interval);
+          return;
+        }
+
+        confetti(Object.assign({}, defaults, {
+          particleCount: 15,
+          origin: { x: Math.random(), y: Math.random() - 0.2 }
+        }));
+      }, 250);
+    }
+
+    window.onload = soltarConfete;
+  </script>
+
+</body>
+</html>
